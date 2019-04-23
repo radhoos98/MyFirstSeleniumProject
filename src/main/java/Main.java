@@ -9,75 +9,83 @@ public class Main {
         register();
     }
 
-    public static void login(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver2");
+    public static void login() {
+//        System.setProperty("webdriver.chrome.driver","resources/chromedriver2.exe");
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://fasttrackit.org/selenium-test/");
+//        driver.findElement(By.cssSelector("a.skip-account .label")).click();
+//        driver.findElement(By.cssSelector("a[href*= 'login'")).click();
+//        driver.findElement(By.id("email")).sendKeys("Email@email.com");
+//        driver.findElement(By.id("pass")).sendKeys("Parola.11");
+//        sleep(3);
+//        driver.findElement(By.id("send2")).click();
+//        driver.close();
+    }
+
+    public static void register() {
+//        System.setProperty("webdriver.chrome.driver","resources/chromedriver2.exe");
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://www.firstkid.ro");
+//        driver.findElement(By.cssSelector("a[class='my-account-link'")).click();
+//        driver.findElement(By.cssSelector("a.mini-my-account-create-account")).click();
+//        driver.findElement(By.id("firstname")).sendKeys("Serbanescu");
+//        driver.findElement(By.id("lastname")).sendKeys("Radu");
+//        driver.findElement(By.id("email_address")).sendKeys("email@email.com");
+//        driver.findElement(By.id("day")).sendKeys("30");
+//        driver.findElement(By.id("month")).sendKeys("9");
+//        driver.findElement(By.id("year")).sendKeys("1977");
+//        driver.findElement(By.id("password")).sendKeys("Parola.11");
+//        driver.findElement(By.id("confirmation")).sendKeys("Parola.11");
+//        driver.findElement(By.cssSelector("button.button[title='Trimite'")).click();
+//        sleep(5);
+//        driver.close();
+    }
+
+//    public static void addToCart() {
+//        System.setProperty("webdriver.chrome.driver", "resources/chromedriver2.exe");
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://www.firstkid.ro");
+//        driver.findElement(By.cssSelector("a[class='my-account-link'")).click();
+//        driver.findElement(By.cssSelector("a.top-mini-my-account-login")).click();
+//        driver.findElement(By.id("email")).sendKeys("email@email.com");
+//        driver.findElement(By.id("pass")).sendKeys("Parola.11");
+//        driver.findElement(By.id("send2")).click();
+//        driver.findElement(By.cssSelector("div.menu-container")).click();
+//        driver.findElement(By.cssSelector("a[href = 'https://www.firstkid.ro/alimentatia-copilului'")).click();
+//        driver.findElement(By.cssSelector(" a[href = 'https://www.firstkid.ro/biberoane'")).click();
+//        driver.findElement(By.cssSelector("img[alt* ='Biberonul-anti-colici-cu-gat-larg-BabyOno-403-240ml'")).click();
+//        driver.findElement(By.id("qty")).sendKeys("2");
+//        driver.findElement(By.cssSelector("button[onclick= 'productAddToCartForm.submit(this)'")).click();
+//        sleep(5);
+//        driver.close();
+//    }
+//
+    public static void registerAddToCartCheckout(){
+        System.setProperty("webdriver.chrome.driver","resources/chromedriver2.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://fasttrackit.org/selenium-test/");
-        driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
-        driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.cssSelector("#email")).sendKeys("Email@email.com");
-        driver.findElement(By.cssSelector("#pass")).sendKeys("Parola.11");
-        sleep(3);
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
+        driver.findElement(By.cssSelector("a.skip-link.skip-account")).click();
+        driver.findElement(By.cssSelector("a[title='Log In'")).click();
+        driver.findElement(By.cssSelector("a[title='Create an Account'")).click();
+        driver.findElement(By.id("firstname")).sendKeys("Serbanescu");
+        driver.findElement(By.id("lastname")).sendKeys("Radu");
+        driver.findElement(By.id("email_adress")).sendKeys("email@email.com");
+        driver.findElement(By.id("password")).sendKeys("Parola.11");
+        driver.findElement(By.id("confirmation")).sendKeys("Parola.11");
+        driver.findElement(By.cssSelector("button.button.validation-passed")).click();
+        driver.findElement(By.cssSelector("li.level0.nav-2.parent a.level0.has-children")).click();
+        driver.findElement(By.cssSelector("li.level1.nav-2-2 a.level1")).click();
+        driver.findElement(By.cssSelector("a[title *='Plaid Cotton Shirt'")).click();
+        driver.findElement(By.cssSelector("img[alt='Charcoal'")).click();
+        driver.findElement(By.cssSelector("a[title='M'")).click();
+        driver.findElement(By.id("qty")).sendKeys("2");
+        driver.findElement(By.cssSelector("div.add-to-cart button.button.btn-cart")).click();
+        driver.findElement(By.cssSelector("ul.checkout-types.top button.button.btn-proceed-checkout.btn-checkout")).click();
+        sleep(10);
         driver.close();
-    }
 
-    public static void register(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver2");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.firstkid.ro");
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > div > div > p > a")).click();
-        driver.findElement(By.cssSelector("#firstname")).sendKeys("Serbanescu");
-        driver.findElement(By.cssSelector("#lastname")).sendKeys("Radu");
-        driver.findElement(By.cssSelector("#email_address")).sendKeys("email@email.com");
-        driver.findElement(By.cssSelector("#day")).sendKeys("30");
-        driver.findElement(By.cssSelector("#month")).sendKeys("9");
-        driver.findElement(By.cssSelector("#year")).sendKeys("1977");
-        driver.findElement(By.cssSelector("#password")).sendKeys("Parola.11");
-        driver.findElement(By.cssSelector("#confirmation")).sendKeys("Parola.11");
-        driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button > span > span")).click();
-        sleep(5);
-        driver.close();
-    }
 
-    public static void addToCart(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver2");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.firstkid.ro");
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > div > div > a")).click();
-        driver.findElement(By.cssSelector("#email")).sendKeys("email@email.com");
-        driver.findElement(By.cssSelector("#pass")).sendKeys("Parola.11");
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header-wrapper > div > div > div.dropdown-menu > div > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header-wrapper > div > div > div.dropdown-menu > div > ul > li:nth-child(2) > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.main-container.col2-left-layout > div > div.row > div.col-left.sidebar.f-left.col-sm-3 > div.block.block-category-nav > div.block-content > ul > li:nth-child(2) > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.main-container.col2-left-layout > div > div.row > div.col-main.col-sm-9.f-right > div.category-products > ul > li:nth-child(2) > div > div.product-image-area > a > img")).click();
-        driver.findElement(By.cssSelector("#qty")).sendKeys("2");
-        driver.findElement(By.cssSelector("#product_addtocart_form > div.row > div.product-shop.col-sm-7 > div.add-to-box > div > button > span > span")).click();
-        sleep(5);
-        driver.close();
-    }
 
-    public static void checkout(){
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver2");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.firstkid.ro");
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header.container > div.header-liks > div.my-account-area > div > div > div > a")).click();
-        driver.findElement(By.cssSelector("#email")).sendKeys("email@email.com");
-        driver.findElement(By.cssSelector("#pass")).sendKeys("Parola.11");
-        driver.findElement(By.cssSelector("#send2 > span > span")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header-wrapper > div > div > div.dropdown-menu > div > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.header-container.type10 > div.header-wrapper > div > div > div.dropdown-menu > div > ul > li:nth-child(5) > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.main-container.col2-left-layout > div > div.row > div.col-left.sidebar.f-left.col-sm-3 > div.block.block-category-nav > div.block-content > ul > li:nth-child(7) > a")).click();
-        driver.findElement(By.cssSelector("body > div.wrapper > div > div.main-container.col2-left-layout > div > div.row > div.col-main.col-sm-9.f-right > div.category-products > ul > li:nth-child(2) > div > div.product-image-area > a > img")).click();
-        driver.findElement(By.cssSelector("#qty")).sendKeys("1");
-        driver.findElement(By.cssSelector("#product_addtocart_form > div.row > div.product-shop.col-sm-7 > div.add-to-box > div > button > span > span")).click();
-        driver.findElement (By.cssSelector("body > div.wrapper > div > div.main-container.col1-layout > div > div > div.cart > div.page-title.title-buttons > ul > li > button > span > span")).click();
-        sleep(5);
-        driver.close();
 
     }
 
